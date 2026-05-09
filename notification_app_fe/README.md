@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Stage 1
+
+## Approach
+
+Unread notifications are filtered first.
+
+Priority is calculated using:
+1. Notification type
+2. Recency
+
+Placement notifications get highest priority.
+
+Notifications are sorted by score and top 10 are displayed.
+
+## Efficiency
+
+Sorting complexity:
+O(n log n)
+
+To efficiently maintain top 10 notifications,
+a priority queue / min heap can be used.
